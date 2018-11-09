@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import {Routes, RouterModule, PreloadAllModules} from '@angular/router';
-import {LoginComponent} from "./login/login.component";
+import {LoginComponent} from "./authentication/login/login.component";
 import {HomeComponent} from "./home/home.component";
 import {FirstpageComponent} from "./firstpage/firstpage.component";
 import {SecondpageComponent} from "./secondpage/secondpage.component";
 import {AppGuard, LoginGuard} from "./app.guard";
+import {AddbillComponent} from "./billing/addbill/addbill.component";
 
 const routes: Routes = [
   {
@@ -26,6 +27,11 @@ const routes: Routes = [
     path: "second",
     component: SecondpageComponent,
     canActivate: [AppGuard]
+  },
+  {
+    path: "bill/create",
+    component: AddbillComponent,
+    canActivate: [AppGuard],
   },
   {
     path: "",

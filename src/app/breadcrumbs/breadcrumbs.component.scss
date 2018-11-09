@@ -1,8 +1,8 @@
-@import "../../styles/colors";
-@import "../../styles/mixing";
+@import "../../assets/styles/colors";
+@import "../../assets/styles/mixing";
 
 :host {
-  line-height: 5rem;
+  line-height: 4rem;
   position: relative;
   display: block;
 }

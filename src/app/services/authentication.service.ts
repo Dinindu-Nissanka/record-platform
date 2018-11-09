@@ -13,10 +13,10 @@ export class AuthenticationService {
     this.loginUserInfo.next(_loginUserInfo);
   }
 
-  login() {
+  login(userName: string, password: string) {
     const loginInfo = new LoginResponse();
     loginInfo.isLoggedIn = true;
-    loginInfo.userName = "manoj";
+    loginInfo.userName = userName;
     this.loginUserInfo.next(loginInfo);
     sessionStorage.setItem('loginUserInfo', JSON.stringify(loginInfo));
     this._router.navigate(['home']);
