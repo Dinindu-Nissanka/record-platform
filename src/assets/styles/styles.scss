@@ -5,6 +5,7 @@
 @import "animations";
 @import "bootstrap_overides";
 @import "mixing";
+@import "../../../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 html,body{
   width: 100%;
@@ -15,6 +16,7 @@ html,body{
 
 body *{
   font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
 }
 
 input,button{
@@ -25,6 +27,7 @@ input,button{
   box-shadow: none!important;
   outline: 0!important;
   padding: 6px 12px;
+  font-size: 14px;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 
   &:focus{
