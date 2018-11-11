@@ -8,6 +8,10 @@ import {LoginComponent} from "./authentication/login/login.component";
 import {HomeComponent} from "./home/home.component";
 import {FirstpageComponent} from "./firstpage/firstpage.component";
 import {SecondpageComponent} from "./secondpage/secondpage.component";
+import {CreateElectricityBillComponent} from "./utility-bills/electricity/create/create-electricity-bill.component";
+import {CreateInternetBillComponent} from "./utility-bills/internet/create/create-internet-bill.component";
+import {CreateWaterBillComponent} from "./utility-bills/water/create/create-water-bill.component";
+import {CreateTelephoneBillComponent} from "./utility-bills/telephone/create/create-telephone-bill.component";
 import {AppGuard, LoginGuard} from "./app.guard";
 import {AuthenticationService} from "./services/authentication.service";
 import {AppCommonService} from "./services/app-common.service";
@@ -21,6 +25,8 @@ import {HasPermissionsDirective} from "./directives/has-permissions.directive";
 import {BreadcrumbsComponent} from "./breadcrumbs/breadcrumbs.component";
 import {SignupComponent} from "./authentication/signup/signup.component";
 import { AddbillComponent } from './billing/addbill/addbill.component';
+import { SharedModule } from "./shared/shared.module";
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
   declarations: [
@@ -29,6 +35,10 @@ import { AddbillComponent } from './billing/addbill/addbill.component';
     HomeComponent,
     FirstpageComponent,
     SecondpageComponent,
+    CreateElectricityBillComponent,
+    CreateInternetBillComponent,
+    CreateWaterBillComponent,
+    CreateTelephoneBillComponent,
     HeaderComponent,
     HamburgerMenuComponent,
     UserAvatarComponent,
@@ -46,7 +56,9 @@ import { AddbillComponent } from './billing/addbill/addbill.component';
     ButtonsModule.forRoot(),
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    SharedModule,
+    NgbModule
   ],
   providers: [
     AppGuard,
