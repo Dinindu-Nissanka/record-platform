@@ -8,10 +8,6 @@ import {LoginComponent} from "./authentication/login/login.component";
 import {HomeComponent} from "./home/home.component";
 import {FirstpageComponent} from "./firstpage/firstpage.component";
 import {SecondpageComponent} from "./secondpage/secondpage.component";
-import {CreateElectricityBillComponent} from "./utility-bills/electricity/create/create-electricity-bill.component";
-import {CreateInternetBillComponent} from "./utility-bills/internet/create/create-internet-bill.component";
-import {CreateWaterBillComponent} from "./utility-bills/water/create/create-water-bill.component";
-import {CreateTelephoneBillComponent} from "./utility-bills/telephone/create/create-telephone-bill.component";
 import {AppGuard, LoginGuard} from "./app.guard";
 import {AuthenticationService} from "./services/authentication.service";
 import {AppCommonService} from "./services/app-common.service";
@@ -24,9 +20,9 @@ import {MainMenuComponent} from "./main-menu/main-menu.component";
 import {HasPermissionsDirective} from "./directives/has-permissions.directive";
 import {BreadcrumbsComponent} from "./breadcrumbs/breadcrumbs.component";
 import {SignupComponent} from "./authentication/signup/signup.component";
-import { AddbillComponent } from './billing/addbill/addbill.component';
-import { SharedModule } from "./shared/shared.module";
+import {SharedModule} from "./shared/shared.module";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {BillingModule} from "./billing/billing.module";
 
 @NgModule({
   declarations: [
@@ -35,22 +31,16 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
     HomeComponent,
     FirstpageComponent,
     SecondpageComponent,
-    CreateElectricityBillComponent,
-    CreateInternetBillComponent,
-    CreateWaterBillComponent,
-    CreateTelephoneBillComponent,
     HeaderComponent,
     HamburgerMenuComponent,
     UserAvatarComponent,
     MainMenuComponent,
     HasPermissionsDirective,
     BreadcrumbsComponent,
-    SignupComponent,
-    AddbillComponent
+    SignupComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
     CommonModule,
     ButtonsModule.forRoot(),
@@ -58,7 +48,9 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
     TooltipModule.forRoot(),
     AlertModule.forRoot(),
     SharedModule,
-    NgbModule
+    NgbModule,
+    BillingModule,
+    AppRoutingModule
   ],
   providers: [
     AppGuard,

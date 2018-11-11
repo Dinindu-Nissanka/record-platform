@@ -16,9 +16,10 @@ export class MainMenuComponent implements OnInit {
   private menuSource: MenuItem[] = [
     { id: 1, route: '/home', name: 'Home', position: 'parent', iconName: 'home', pattern: '*' },
     { id: 2, route: '/', name: 'Bill', position: 'parent has-child', iconName: 'blur_linear', pattern: 'bill' },
-    { id: 3, route: 'bill/create', name: 'Create Bill', position: 'child', iconName: 'assignment', pattern: 'bill:create' },
-    { id: 4, route: '/first', name: 'First', position: 'parent', iconName: 'assignment', pattern: '*' },
-    { id: 5, route: '/second', name: 'Second', position: 'parent', iconName: 'apps',pattern: '*' }
+    { id: 3, route: '/bill/create', position: 'child', name: 'Create Bill', iconName: 'add_box', pattern: 'bill:create' },
+    { id: 4, route: '/bill/view', position: 'child', name: 'View Bill', iconName: 'pageview', pattern: 'bill:view' },
+    { id: 5, route: '/first', name: 'First', position: 'parent', iconName: 'assignment', pattern: '*' },
+    { id: 6, route: '/second', name: 'Second', position: 'parent', iconName: 'apps',pattern: '*' }
   ];
 
 
