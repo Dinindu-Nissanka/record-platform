@@ -9,7 +9,7 @@ export class AddbillComponent implements OnInit {
 
   typeString: string [] = ["", "Electricity", "Internet", "Telephone", "Water"];
   selectedType: string;
-  isElectricty: boolean;
+  isElectricity: boolean;
   isWater: boolean;
   isInternet: boolean;
   isTelephone: boolean;
@@ -28,7 +28,7 @@ export class AddbillComponent implements OnInit {
 
     switch (this.selectedType) {
       case "Electricity": {
-        this.isElectricty = true;
+        this.isElectricity = true;
         break;
       }
       case "Water": {
@@ -51,7 +51,7 @@ export class AddbillComponent implements OnInit {
   }
 
   clearAll() {
-    this.isElectricty = false;
+    this.isElectricity = false;
     this.isInternet = false;
     this.isWater = false;
     this.isTelephone = false;

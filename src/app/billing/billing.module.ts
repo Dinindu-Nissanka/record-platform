@@ -11,6 +11,7 @@ import {FormsModule} from "@angular/forms";
 import {BrowserModule} from "@angular/platform-browser";
 import {SharedModule} from "../shared/shared.module";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {ViewElectricityBillComponent} from "./utility-bills/electricity/view/view-electricity-bill.component";
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
     CreateWaterBillComponent,
     CreateTelephoneBillComponent,
     AddbillComponent,
-    ViewbillComponent
+    ViewbillComponent,
+    ViewElectricityBillComponent
   ]
 })
 export class BillingModule {}
